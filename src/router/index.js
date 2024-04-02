@@ -55,6 +55,22 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "contact" */ '../views/ListBinding.vue')
+  },
+  {
+    path: '/RenderingView',
+    name: 'RenderingView',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "contact" */ '../views/RenderingView.vue')
+  },
+  {
+    path: '/CounterView',
+    name: 'CounterView',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "contact" */ '../views/CounterView.vue')
   }
 ]
 
