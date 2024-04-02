@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/basic/HomeView.vue'
 // import ContactView from '../views/ContactView.vue'
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/basic/AboutView.vue')
   },
   {
     path: '/contact',
@@ -22,7 +22,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ContactView.vue')
+    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/basic/ContactView.vue')
   },
   {
     path: '/basic',
@@ -30,7 +30,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/BasicView.vue')
+    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/basic/BasicView.vue')
   },
   {
     path: '/DataBinding',
@@ -38,7 +38,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact" */ '../views/DataBinding.vue')
+    component: () => import(/* webpackChunkName: "contact" */ '../views/basic/DataBinding.vue')
   },
   {
     path: '/DataBindingInputText',
@@ -46,7 +46,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact" */ '../views/DataBindingInputText.vue')
+    component: () => import(/* webpackChunkName: "contact" */ '../views/basic/DataBindingInputText.vue')
   },
   {
     path: '/ListBinding',
@@ -54,7 +54,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact" */ '../views/ListBinding.vue')
+    component: () => import(/* webpackChunkName: "contact" */ '../views/basic/ListBinding.vue')
   },
   {
     path: '/RenderingView',
@@ -62,7 +62,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact" */ '../views/RenderingView.vue')
+    component: () => import(/* webpackChunkName: "contact" */ '../views/basic/RenderingView.vue')
   },
   {
     path: '/CounterView',
@@ -70,7 +70,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact" */ '../views/CounterView.vue')
+    component: () => import(/* webpackChunkName: "contact" */ '../views/basic/CounterView.vue')
   },
   {
     path: '/ComputedView',
@@ -78,7 +78,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact" */ '../views/ComputedView.vue')
+    component: () => import(/* webpackChunkName: "contact" */ '../views/basic/ComputedView.vue')
   },
   {
     path: '/WatchView',
@@ -86,7 +86,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "contact" */ '../views/WatchView.vue')
+    component: () => import(/* webpackChunkName: "contact" */ '../views/basic/WatchView.vue')
   }
 ]
 
