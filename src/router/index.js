@@ -87,6 +87,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "contact" */ '../views/basic/WatchView.vue')
+  },
+  {
+    path: '/SearchView',
+    name: 'SearchView',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "contact" */ '../views/basic/SearchView.vue')
   }
 ]
 
