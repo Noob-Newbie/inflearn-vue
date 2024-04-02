@@ -8,6 +8,13 @@ export default {
     return{
 
     }
+  },
+  setup(){},
+  created() {},
+  mounted() {},
+  unmounted() {},
+  methods: {
+
   }
 }
 </script>
