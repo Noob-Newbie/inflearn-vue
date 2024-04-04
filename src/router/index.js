@@ -75,6 +75,11 @@ const routes = [
     path: '/ServerData',
     name: 'ServerData',
     component: () => import(/* webpackChunkName: "contact" */ '../views/basic/ServerData.vue')
+  },
+  {
+    path: '/AdvancedExample',
+    name: 'AdvancedExample',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/advanced/AdvancedExample.vue')
   }
 ]
 
