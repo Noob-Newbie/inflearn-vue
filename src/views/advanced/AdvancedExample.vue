@@ -1,7 +1,8 @@
 <template>
   <div>
     <PageTitle :title="title"/>
-    <ChildComponent :isOk="isOk" :commentId="[1,2,3]" :author="author"/>
+    <ChildComponent :isOk="isOk" :commentId="[1,2,3]" :author="author" ref="child"/>
+    <button type="button" @click="callChild">Parent</button>
   </div>
 </template>
 <script>
@@ -24,7 +25,10 @@ export default {
   mounted() {},
   unmounted() {},
   methods: {
-
+    callChild() {
+      this.$refs.child.$refs.child.click() //버튼 클릭
+      this.$refs.child.childFunc();
+    }
   }
 }
 </script>
