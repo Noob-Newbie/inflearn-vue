@@ -2,10 +2,14 @@
   <div>
     <PageTitle :title="title"/>
     <ChildComponent :isOk="isOk" :commentId="[1,2,3]" :author="author" ref="child"/>
-    <ChildComponent2 @send-message="sendMessage"/>
     <button type="button" @click="callChild">Parent</button>
     <div>
       <h1>{{parentMsg}}</h1>
+    </div>
+
+    <div>
+      <ChildComponent2 @send-message="sendMessage" ref="child2"/>
+      <button type="button" @click="showData">부모버튼</button>
     </div>
   </div>
 </template>
@@ -30,6 +34,11 @@ export default {
   created() {},
   mounted() {},
   unmounted() {},
+  computed:{
+    msg(){
+      return this.$refs.child2.msg;
+    }
+  },
   methods: {
     callChild() {
       this.$refs.child.$refs.child.click() //버튼 클릭
@@ -40,6 +49,9 @@ export default {
     sendMessage(data){
       alert(data)
       this.parentMsg = data;
+    },
+    showData(){
+      alert(this.msg());
     }
   }
 }

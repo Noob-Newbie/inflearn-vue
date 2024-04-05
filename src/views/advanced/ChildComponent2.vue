@@ -1,6 +1,7 @@
 <template>
   <div>
     <button type="button" @click="sendFromChild">자식 컴포넌트 버튼2</button>
+    <button type="button" @click="changeData">자식 데이터 변경</button>
   </div>
 </template>
 <script>
@@ -17,6 +18,9 @@ export default {
   methods: {
     sendFromChild(){
       this.$emit('send-message', this.msg);
+    },
+    changeData(){
+      this.msg = '데이터 변경됨';
     }
   }
 }
