@@ -1,25 +1,29 @@
 <template>
   <div>
     <PageTitle :title="title"/>
-    <ChildComponent :isOk="isOk" :commentId="[1,2,3]" :author="author" ref="child">
-      <div></div>
-    </ChildComponent>
+    <ChildComponent :isOk="isOk" :commentId="[1,2,3]" :author="author" ref="child"/>
+    <ChildComponent2 @send-message="sendMessage"/>
     <button type="button" @click="callChild">Parent</button>
+    <div>
+      <h1>{{parentMsg}}</h1>
+    </div>
   </div>
 </template>
 <script>
 import PageTitle from "@/views/advanced/PageTitle.vue";
 import ChildComponent from "@/views/advanced/ChildComponent.vue";
+import ChildComponent2 from "@/views/advanced/ChildComponent2.vue";
 export default {
-  components: {PageTitle,ChildComponent},
+  components: {PageTitle,ChildComponent,ChildComponent2},
   data(){
     return{
       title: "부모 화면 전송 페이지 타이틀",
       isOk : true,
       author: {
-        name:'홍길동',
-        company :'회사이름'
-      }
+        name: '홍길동',
+        company: '회사이름'
+      },
+      parentMsg: ''
     }
   },
   setup(){},
@@ -32,6 +36,10 @@ export default {
       this.$refs.child.childFunc();
 
       this.$refs.child.msg = "부모에서 바꾼 텍스트"; //부모에서 하위 데이터 값 변경
+    },
+    sendMessage(data){
+      alert(data)
+      this.parentMsg = data;
     }
   }
 }
