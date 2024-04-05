@@ -1,7 +1,9 @@
 <template>
   <div>
     <PageTitle :title="title"/>
-    <ChildComponent :isOk="isOk" :commentId="[1,2,3]" :author="author" ref="child"/>
+    <ChildComponent :isOk="isOk" :commentId="[1,2,3]" :author="author" ref="child">
+      <div></div>
+    </ChildComponent>
     <button type="button" @click="callChild">Parent</button>
   </div>
 </template>
@@ -28,6 +30,8 @@ export default {
     callChild() {
       this.$refs.child.$refs.child.click() //버튼 클릭
       this.$refs.child.childFunc();
+
+      this.$refs.child.msg = "부모에서 바꾼 텍스트"; //부모에서 하위 데이터 값 변경
     }
   }
 }

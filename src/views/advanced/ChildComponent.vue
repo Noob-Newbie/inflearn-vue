@@ -10,6 +10,9 @@
       authorname : {{author.name}}
     </div>
     <button type="button" @click="childFunc" ref="child">Child</button>
+    <div>
+      {{msg}}
+    </div>
   </div>
 </template>
 <script>
@@ -32,7 +35,7 @@ export default {
   },
   data(){
     return{
-      sampleData : ''
+      msg : "자식 메시지"
     }
   },
   setup(){},
