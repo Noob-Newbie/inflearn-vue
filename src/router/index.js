@@ -80,6 +80,11 @@ const routes = [
     path: '/AdvancedExample',
     name: 'AdvancedExample',
     component: () => import(/* webpackChunkName: "contact" */ '../views/advanced/AdvancedExample.vue')
+  },
+  {
+    path: '/MixinTest',
+    name: 'MixinTest',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/advanced/MixinTest.vue')
   }
 ]
 
