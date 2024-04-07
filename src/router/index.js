@@ -85,6 +85,11 @@ const routes = [
     path: '/MixinTest',
     name: 'MixinTest',
     component: () => import(/* webpackChunkName: "contact" */ '../views/advanced/MixinTest.vue')
+  },
+  {
+
+    name: 'calcu    path: \'/calculator\',lator',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/advanced/calculator.vue')
   }
 ]
 
