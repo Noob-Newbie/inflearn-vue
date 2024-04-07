@@ -105,6 +105,11 @@ const routes = [
     path: '/CompositionAPI4',
     name: '/CompositionAPI4',
     component: () => import('../views/composition/CompositionAPI3.vue')
+  },
+  {
+    path: '/CompositionAPIProvide',
+    name: '/CompositionAPIProvide',
+    component: () => import('../views/composition/CompositionAPIProvide.vue')
   }
 ]
 
